@@ -26,13 +26,19 @@ async function runModel(input){
 	// 2. Load the model and await it
 	const model = await tf.loadLayersModel(modelPath);
 
-	// 3. Transform the data into tensors and cast the data into the correct expected data type
-	// (in this case, the model expects a float tensor)
-	const data = tf.tidy(()=>{return tf.tensor1d([input]).cast('float32');})
+	// 2.1 When manipulating tensors and calling .predict on a model, wrap it up in a tf.tidy() function
+	// This function frees the resources used when pre processing tensors.
+	// Memory management is critical!
+	const predictions = tf.tidy(() => {
+		// 3. Data Preprocessing:
+		// Transform the data into tensors and cast the data into the correct expected data type
+		// (in this case, the model expects a float tensor)
+		const data = tf.tensor1d([input]).cast('float32');
 
-	// 4. Call the predict function. It is, by default, an async function. Do not forget
-	// to add the '.dataSync()' method to retrieve the output tensor from the model
-	const predictions = model.predict(data).dataSync();
+		// 4. Call the predict function. It is, by default, an async function. Do not forget
+		// to add the '.dataSync()' method to retrieve the output tensor from the model
+		return model.predict(data).dataSync();
+	});
 
 	// 5. Do stuff with the output tensor
 	// (In this case, we want to return the predict value for the given input. The tensor shape is [1,1] so
@@ -44,8 +50,6 @@ async function runModel(input){
 app.post('/predict', async function (req, res) {
 	// Sanity Check: Checking if the x field in the JSON exists
 	if (typeof req.body.x !== 'undefined' && req.body.x !== null){
-		// Running tf.tidy to free resources consumed by tensorflow.
-		// TENSORFLOW CONSUMES A TON OF MEMORY.
 		const result1 = await runModel(req.body.x);
 		res.json({result: result1});
 	}
