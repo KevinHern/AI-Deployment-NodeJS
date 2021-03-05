@@ -76,7 +76,13 @@ app.post('/*', function(req, res) {
 });
 
 // Instantiating the server
-var server = app.listen(16000, function () {
+/*
+	NOTE: There are 2 ports that the app can liston to.
+	The process.env.PORT is port dynamically allocated to the app when it has been deployed on a production
+	environment.
+	The other port is a user assigned port for developing. This port only works locally
+*/
+var server = app.listen(process.env.PORT || 16000, function () {
    var host = server.address().address
    var port = server.address().port
    
