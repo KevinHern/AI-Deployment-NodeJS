@@ -57,7 +57,6 @@ function processImg(img64, modelInputShape, extension = ''){
 		const normalizedImg = resizedImg.cast('float32').div(255.0);
 		return normalizedImg;
 	});
-	//console.log(newImg.shape);
 
 	// 2. Reshaping to match the model's input shape
 	return newImg.reshape([1, 180, 180, 3]);
