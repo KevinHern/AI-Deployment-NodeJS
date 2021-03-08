@@ -49,9 +49,16 @@ async function runModel(input){
 // This is the main URL to do predictions
 app.post('/predict', async function (req, res) {
 	// Sanity Check: Checking if the x field in the JSON exists
-	if (typeof req.body.x !== 'undefined' && req.body.x !== null){
-		const result1 = await runModel(req.body.x);
-		res.json({result: result1});
+	if (typeof req.body.x !== 'undefined' && req.body.x !== null){		
+		try{
+			// Run the Model and be sure to await it
+			const results = await runModel(req.body.x);
+			res.json({result: results});
+		}
+		catch(error){
+			console.log(error);
+			res.sendStatus(500);
+		}
 	}
 	// Send error if the X field does not exist in the JSON
 	else{
@@ -61,18 +68,13 @@ app.post('/predict', async function (req, res) {
 })
 
 // Route used for redirection if another route is attempted to get accesed
-app.get('/error', function(req, res) {
+app.get('/*', function(req, res) {
 	res.send('Hello :D');
 });
 
-// Redirecting any GET request for any route to the /error route
-app.get('/*', function(req, res) {
-	res.redirect('http://127.0.0.1:16000/error');
-});
-
-// Redirecting any POST request for any route to the /error route
+// Route used for redirection if another route is attempted to get accesed
 app.post('/*', function(req, res) {
-	res.redirect('http://127.0.0.1:16000/error');
+	res.send('Hello :D');
 });
 
 // Instantiating the server
