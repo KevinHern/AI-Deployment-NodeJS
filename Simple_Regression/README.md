@@ -40,4 +40,4 @@ It is located in the *__assets/* directory. Make sure that there are 2 files ins
 2. group1-shard1of1.bin
 
 ## Additional Notes
-To check how to the code works, make sure to read the *__index.js__* file.
+* To check how to the code works, make sure to read the *__index.js__* file.
