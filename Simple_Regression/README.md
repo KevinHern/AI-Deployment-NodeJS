@@ -1,4 +1,4 @@
-# HelloWorld-AI-Deployment-NodeJS
+# Deployment in NodeJS: Simple Regression
 Small demo to deploy an AI in a NodeJS App
 
 ## How to install the app
