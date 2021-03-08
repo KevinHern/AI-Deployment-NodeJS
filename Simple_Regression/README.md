@@ -35,7 +35,7 @@ The server returns a JSON containing the following format:
 ```
 
 ## Where is the AI model?
-It is located in the *__assets/* directory. Make sure that there are 2 files inside the directory:
+It is located in the *__assets/__* directory. Make sure that there are 2 files inside the directory:
 1. model.json
 2. group1-shard1of1.bin
 
