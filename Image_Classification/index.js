@@ -50,12 +50,12 @@ function processImg(img64, modelInputShape, extension = ''){
 		const maxVal = inputTensor.max();
 		const minVal = inputTensor.min();
 
-        const normalizedImg = decodedImg.sub(minVal).div(maxVal.sub(minVal));
-        */
+		const normalizedImg = decodedImg.sub(minVal).div(maxVal.sub(minVal));
+		*/
 
-        /* METHOD 2: Manually set values */
-        const normalizedImg = resizedImg.cast('float32').div(255.0);
-        return normalizedImg;
+		/* METHOD 2: Manually set values */
+		const normalizedImg = resizedImg.cast('float32').div(255.0);
+		return normalizedImg;
 	});
 	//console.log(newImg.shape);
 
