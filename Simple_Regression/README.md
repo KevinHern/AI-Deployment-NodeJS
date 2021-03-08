@@ -1,4 +1,4 @@
-# Deployment in NodeJS: Simple Regression
+# AI Deployment in NodeJS: Simple Regression
 Small demo to deploy an simple Linear Regression AI in a NodeJS App
 
 ## How to install the app

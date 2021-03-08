@@ -68,7 +68,7 @@ async function runModel(img64, extension = ''){
 	/* ----- AI Section ----- */
 
 	// 1. Provide the PATH to the model.json after the 'file://'
-	const modelPath = 'file://assets/aiconv/model.json';	
+	const modelPath = 'file://assets/ai/model.json';	
 
 	// 2. Load the model and await it
 	const model = await tf.loadLayersModel(modelPath);
