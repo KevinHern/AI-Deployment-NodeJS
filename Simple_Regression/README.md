@@ -1,8 +1,8 @@
 # Deployment in NodeJS: Simple Regression
-Small demo to deploy an AI in a NodeJS App
+Small demo to deploy an simple Linear Regression AI in a NodeJS App
 
 ## How to install the app
-Clone the repo and run the following command inside the cloned directory:
+Clone the repo and run the following command inside the *__Simple_Regression__* directory:
 
 ```bat
 npm install
@@ -35,7 +35,7 @@ The server returns a JSON containing the following format:
 ```
 
 ## Where is the AI model?
-It is located in the *__assets/ai/__* directory. Make sure that there are 2 files inside the directory:
+It is located in the *__assets/* directory. Make sure that there are 2 files inside the directory:
 1. model.json
 2. group1-shard1of1.bin
 
