@@ -8,6 +8,12 @@ Clone the repo and run the following command inside the cloned directory:
 npm install
 ```
 
+## How to run app
+
+```bat
+node index.js
+```
+
 ## How to make the AI work
 The AI is a simple image classificator (model taken from this [colab](https://www.tensorflow.org/tutorials/images/classification)). It receives an image *encoded in base64* and returns the class it belongs to.
 The app listens on the port 16000 and by default, it runs locally on your machine (127.0.0.1).

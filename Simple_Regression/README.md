@@ -8,6 +8,12 @@ Clone the repo and run the following command inside the *__Simple_Regression__* 
 npm install
 ```
 
+## How to run app
+
+```bat
+node index.js
+```
+
 ## How to make the AI work
 The AI is a simple linear regression predictor. It receives a float number and outputs a result of the form of  *__y = 2x+1__*.
 The app listens on the port 16000 and by default, it runs locally on your machine (127.0.0.1).
