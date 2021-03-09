@@ -36,4 +36,6 @@ After that, execute the following command to export your saved model into a json
 !tensorflowjs_converter --input_format=keras_saved_model ./temp/ ./prod/
 ```
 
-*NOTE: The second parameter is the directory that contains your saved model. The thirds parameter is the directory that your exported model's files are going to be located. You must find a __model.json__ file and some binaries too.*
+*NOTE: The second parameter is the directory that contains your saved model. The third parameter is the directory that your exported model's files are going to be located. You must find a __model.json__ file and some binaries too.*
+
+And finally, download all the files contained within the *__./prod/__/ directory and place them inside the assets directory of your NodeJS app.
