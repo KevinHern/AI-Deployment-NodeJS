@@ -2,7 +2,7 @@
 This is a repo that contains multiple examples to deploy different AI models in production using NodeJS.
 Feel free to clone, use and modify the files according to your needs.
 
-All of the examples are to be deployed on a heroku server. To do so, make sure to follow [this tutorial](https://devcenter.heroku.com/articles/deploying-nodejs).
+All of the examples are ready to be deployed on a heroku server. To do so, make sure to follow [this tutorial](https://devcenter.heroku.com/articles/deploying-nodejs).
 Additionally, all the *__package.json__* files cointained within the multiple directories already have the "engine" section added. Do not forget to modify the NodeJS version to match the one you are currently using.
 
 ## Requirements
