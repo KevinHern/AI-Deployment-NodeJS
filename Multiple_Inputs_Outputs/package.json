@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-ai-deploy-multiple-input-output-model",
+  "name": "hello-world-ai-deploy-multiple-inputs-outputs-model",
   "version": "1.0.0",
   "description": "Hello World for AI deployment for model that accepts multiple inputs and gives multiple results",
   "main": "index.js",
