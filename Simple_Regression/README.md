@@ -2,7 +2,7 @@
 Small demo to deploy an simple Linear Regression AI in a NodeJS App.
 
 ## How to install the app
-Clone the repo and run the following command inside the *__Simple_Regression__* directory:
+Clone the repo and run the following command inside the cloned directory:
 
 ```bat
 npm install
