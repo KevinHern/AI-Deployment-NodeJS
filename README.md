@@ -39,3 +39,12 @@ After that, execute the following command to export your saved model into a json
 *NOTE: The second parameter is the directory that contains your saved model. The third parameter is the directory that your exported model's files are going to be located. You must find a __model.json__ file and some binaries too.*
 
 And finally, download all the files contained within the *__./prod/__* directory and place them inside the __assets__ directory of your NodeJS app.
+
+Finally, compress all the files into a zip and download said file
+
+```python
+!zip packed_model.zip ./prod/*
+
+from google.colab import files
+files.download("packed_model.zip")
+```
