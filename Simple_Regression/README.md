@@ -1,5 +1,5 @@
 # AI Deployment in NodeJS: Simple Regression
-Small demo to deploy an simple Linear Regression AI in a NodeJS App
+Small demo to deploy an simple Linear Regression AI in a NodeJS App.
 
 ## How to install the app
 Clone the repo and run the following command inside the *__Simple_Regression__* directory:
@@ -8,14 +8,14 @@ Clone the repo and run the following command inside the *__Simple_Regression__* 
 npm install
 ```
 
-## How to run app
+## How to run the app
 
 ```bat
 node index.js
 ```
 
 ## How to make the AI work
-The AI is a simple linear regression predictor. It receives a float number and outputs a result of the form of  *__y = 2x+1__*.
+The AI is a simple linear regression predictor. It receives a float number and outputs a result of the form of  *__y = 2x+1__* (for all positives. If negative, then it returns 0).
 The app listens on the port 16000 and by default, it runs locally on your machine (127.0.0.1).
 Use an app like Postman and send a POST request to the said port and IP address:
 
@@ -31,7 +31,7 @@ In the body, send a json with the following format:
 
 *NOTE: You can replace the number to get a different output.*
 
-The server returns a JSON containing the following format:
+The server returns a JSON with the following format:
 
 
 ```json

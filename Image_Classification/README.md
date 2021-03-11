@@ -1,5 +1,5 @@
 # AI Deployment in NodeJS: Image Classification
-Small demo to deploy an Image Classificatior AI in a NodeJS App
+Small demo to deploy an Image Classificatior AI in a NodeJS App.
 
 ## How to install the app
 Clone the repo and run the following command inside the cloned directory:
@@ -8,7 +8,7 @@ Clone the repo and run the following command inside the cloned directory:
 npm install
 ```
 
-## How to run app
+## How to run the app
 
 ```bat
 node index.js
@@ -17,7 +17,7 @@ node index.js
 ## How to make the AI work
 The AI is a simple image classificator (model taken from this [colab](https://www.tensorflow.org/tutorials/images/classification)). It receives an image *encoded in base64* and returns the class it belongs to.
 The app listens on the port 16000 and by default, it runs locally on your machine (127.0.0.1).
-Use an app that can send images encoded en base 64 and be sure to send POST request to the said port and IP address:
+Use an app that can send images encoded in base 64 and be sure to send POST request to the said port and IP address:
 
 http://127.0.0.1:16000/predict
 
@@ -32,7 +32,7 @@ In the body, send a json with the following format:
 
 *NOTE: the image extension is an optional parameter.*
 
-The server returns a JSON containing the following format:
+The server returns a JSON with the following format:
 
 
 ```json
@@ -42,7 +42,7 @@ The server returns a JSON containing the following format:
 ```
 
 ## Where is the AI model?
-It is located in the *__assets/ai/__* directory. Make sure that there are 5 files inside the directory:
+It is located in the *__assets/ai/__* directory. Make sure there are 5 files inside the directory:
 1. model.json
 2. group1-shard1of4.bin
 3. group1-shard2of4.bin
