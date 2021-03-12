@@ -46,3 +46,6 @@ And finally, download all the files contained within the *__./prod/__* directory
 from google.colab import files
 files.download("packed_model.zip")
 ```
+
+## Is it possible to export models with custom layers?
+No. This [issue](https://github.com/tensorflow/tfjs/issues/2721) states that there is no support for custom layers. As stated by *__rthadur__*, the workaround is to define the model with equivalent layers. 
