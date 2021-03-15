@@ -59,7 +59,7 @@ function processImg(img64, modelInputShape, extension = ''){
 	});
 
 	// 2. Reshaping to match the model's input shape
-	return newImg.reshape([1, 180, 180, 3]);
+	return newImg.reshape([1, modelInputShape[0], modelInputShape[1], 3]);
 }
 
 // IMPORTANT: the function that loads and calls the model must be an async function!
