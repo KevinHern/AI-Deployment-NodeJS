@@ -1,8 +1,8 @@
-# AI Deployment in NodeJS: Image Classification
-Small demo to deploy an Image Classificatior AI in a NodeJS App.
+# AI Deployment in Node.js: Image Classification
+Small demo to deploy an Image Classificator AI in a Node.js App.
 
 ## How to install the app
-Clone the repo and run the following command inside the cloned directory:
+Clone the repository and run the following command inside the cloned directory:
 
 ```bat
 npm install
@@ -15,13 +15,13 @@ node index.js
 ```
 
 ## How to make the AI work
-The AI is a simple image classificator (model taken from this [colab](https://www.tensorflow.org/tutorials/images/classification)). It receives an image *encoded in base64* and returns the class it belongs to.
+The AI is a simple image classificator taken from this [colab](https://www.tensorflow.org/tutorials/images/classification). It receives an image *encoded in base64* and returns the class it belongs to.
 The app listens on the port 16000 and by default, it runs locally on your machine (127.0.0.1).
 Use an app that can send images encoded in base 64 and be sure to send POST request to the said port and IP address:
 
 http://127.0.0.1:16000/predict
 
-In the body, send a json with the following format:
+In the body, send a JSON with the following format:
 
 ```json
 {
@@ -50,7 +50,7 @@ It is located in the *__assets/ai/__* directory. Make sure there are 5 files ins
 5. group1-shard4of4.bin
 
 ## Testing
-A file with the name of *test_img_class.py* in the *__misc/__* directory has been provided to test this app. Pass the name of the image you want to classify to the app and it can encode it using base64 encription.
+A file with the name of *test_img_class.py* in the *__misc/__* directory has been provided to test this app. Pass the name of the image you want to classify to the app and it can encode it using base64 encryption.
 
 It requires the following libs to work:
 * json

@@ -1,8 +1,8 @@
-# AI Deployment in NodeJS: MNIST GAN
-Small demo to deploy a simple GAN that can generate digits from 0 to 9.
+# AI Deployment in Node.js: MNIST GAN
+Small demo on how to to deploy a simple GAN that can generate digits from 0 to 9.
 
 ## How to install the app
-Clone the repo and run the following command inside the cloned directory:
+Clone the repository and run the following command inside the cloned directory:
 
 ```bat
 npm install

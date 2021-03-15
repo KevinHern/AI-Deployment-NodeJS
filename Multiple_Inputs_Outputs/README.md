@@ -1,8 +1,8 @@
-# AI Deployment in NodeJS: Multiple Inputs and Outputs AI Model
-Small demo to deploy an simple Linear Regression AI in a NodeJS App.
+# AI Deployment in Node.js: Multiple Inputs and Outputs AI Model
+Small demo on how to deploy a complex model that can receive multiple inputs and give multiple outputs.
 
 ## How to install the app
-Clone the repo and run the following command inside the cloned directory:
+Clone the repository and run the following command inside the cloned directory:
 
 ```bat
 npm install
@@ -15,13 +15,13 @@ node index.js
 ```
 
 ## How to make the AI work
-The AI is a simple linear regression predictor. It receives 2 float numbers and outputs 2 results.
+The AI is taken from this [colab](https://colab.research.google.com/drive/18PRazHTScDXssD7slDBlZTDXizNxszqK). It receives 2 float numbers and outputs 2 float numbers.
 The app listens on the port 16000 and by default, it runs locally on your machine (127.0.0.1).
 Use an app like Postman and send a POST request to the said port and IP address:
 
 http://127.0.0.1:16000/predict
 
-In the body, send a json with the following format:
+In the body, send a JSON with the following format:
 
 ```json
 {
